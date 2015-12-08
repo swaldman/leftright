@@ -35,7 +35,7 @@ for( v <- a; w <- b ) yield v+w          // Right(100)
 for( v <- a; w <- b if v > 10) yield v+w // Left(EMPTY)
 ```
 
-For fuller examples, see the [documentation in the scala fork](https://github.com/swaldman/slip/blob/enrich-bias-either/text/0000-enrich-bias-either.md)
+For more complete examples, see the [documentation in the scala fork](https://github.com/swaldman/slip/blob/enrich-bias-either/text/0000-enrich-bias-either.md)
 
 ## Related documents
 
