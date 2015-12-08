@@ -6,7 +6,7 @@ through a sequence of operations. The existing projections API does not support
 `for` loops that make use of pattern matching, conditional guards, or viariable 
 assignment, rendering projections crippled scala monads.
 
-The code in this library is proposed to be included within `scala.util.Either`.
+The code in this library was originally proposed to be included within `scala.util.Either`.
 It is fully documented in a fork of that class, 
 [here](https://github.com/swaldman/slip/blob/enrich-bias-either/text/0000-enrich-bias-either.md).
 
@@ -44,12 +44,15 @@ For more complete examples, see the [documentation in the scala fork](https://gi
 3. [Extensively updated Either API documentation][3]
 4. [SI-7222: Pattern match typing fail in for comprehension][4]
 5. [SI-5589: For-comprehension on Either.RightProjection with Tuple2 extractor in generator fails to compile][5]
+6. [Proposed Either/Or/Xor/Validation SLIP expert group][6]
 
 [1]: https://github.com/scala/scala/pull/4547 "Pull Request"
 [2]: https://github.com/swaldman/slip/blob/enrich-bias-either/text/0000-enrich-bias-either.md "SLIP Proposal"
 [3]: http://www.mchange.com/work/enrich-bias-either/enrich-bias-either-2015-09-19/index.html#scala.util.Either "API Documentation"
 [4]: https://issues.scala-lang.org/browse/SI-7222 "SI-7222"
 [5]: https://issues.scala-lang.org/browse/SI-5589 "SI-5589"
+[6]: https://github.com/scala/slip/issues/5 "Either/Or/Xor/Validation SLIP expert group"
+
 
 
 
