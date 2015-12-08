@@ -3,7 +3,7 @@
 This library tries to address shortcomings ([4],[5]) of `scala.util.Either` in its core use-case as a 
 monadic container for failable operations that carry information about failures 
 through a sequence of operations. The existing projections API does not support
-for loops that make use of pattern matching, conditional guards, or viariable 
+`for` loops that make use of pattern matching, conditional guards, or viariable 
 assignment, rendering them rather crippled scala monads.
 
 The code in this library is proposed to be included within `scala.util.Either`.
