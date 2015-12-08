@@ -20,6 +20,8 @@ resolvers += ("releases" at nexusReleases)
 
 resolvers += ("snapshots" at nexusSnapshots)
 
+libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.12.2" % "test"
+
 publishTo <<= version {
   (v: String) => {
     if (v.trim.endsWith("SNAPSHOT"))
