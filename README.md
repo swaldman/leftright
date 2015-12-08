@@ -1,6 +1,6 @@
-# leftright &mdash; Monadicize `scala.util.Either` via implicit enrichment
+# leftright &mdash; monadicize `Either`
 
-A library to address shortcomings of `scala.util.Either` in its core use-case as a 
+This library tries to address shortcomings[4][5] of `scala.util.Either` in its core use-case as a 
 monadic container for failable operations that carry information about failures 
 through a sequence of operations. The existing projections API does not support
 for loops that make use of pattern matching, conditional guards, or viariable 
@@ -39,11 +39,11 @@ For fuller examples, see the [documentation in the scala fork](https://github.co
 
 ## Related documents
 
-1. [Pull Request: Implicit enrichment as alternative to broken Either projection APIs][6]
-2. [SLIP Proposal - Implicit enrichment of `scala.util.Either` to support monadic bias]
-3. [Extensively updated Either API documentation][2]
-4. [SI-7222: Pattern match typing fail in for comprehension][3]
-5. [SI-5589: For-comprehension on Either.RightProjection with Tuple2 extractor in generator fails to compile][4]
+1. [Pull Request: Implicit enrichment as alternative to broken Either projection APIs][1]
+2. [SLIP Proposal - Implicit enrichment of `scala.util.Either` to support monadic bias][2]
+3. [Extensively updated Either API documentation][3]
+4. [SI-7222: Pattern match typing fail in for comprehension][4]
+5. [SI-5589: For-comprehension on Either.RightProjection with Tuple2 extractor in generator fails to compile][5]
 
 [1]: https://github.com/scala/scala/pull/4547 "Pull Request"
 [2]: https://github.com/swaldman/slip/blob/enrich-bias-either/text/0000-enrich-bias-either.md "SLIP Proposal"
