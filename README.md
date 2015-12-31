@@ -8,9 +8,13 @@ assignment, rendering projections crippled scala monads.
 
 The code in this library was originally proposed to be included within `scala.util.Either`.
 It is fully documented in a fork of that class, 
-[here](https://github.com/swaldman/slip/blob/enrich-bias-either/text/0000-enrich-bias-either.md).
+[here](http://www.mchange.com/work/enrich-bias-either/enrich-bias-either-2015-09-19/index.html#scala.util.Either).
 
-However, while it remains separate, you will need to
+However, while it remains separate, you will need to include a dependency, currently
+
+    "com.mchange" %% "leftright" % "0.0.1"
+
+and
 
 ```scala
 import com.mchange.leftright.BiasedEither
