@@ -6,13 +6,13 @@ organization := "com.mchange"
 
 name := "leftright"
 
-version := "0.0.1"
+version := "0.0.2-SNAPSHOT"
 
 scalaVersion := "2.11.7"
 
-crossScalaVersions <<= scalaVersion { mainVersion =>
-  Seq("2.10.6", mainVersion)
-}
+// won't compile under 2.12, because 2.12 overrides implicit bias in ways that break Either's for comprehension compatibility
+// migrate to YinYang
+crossScalaVersions := Seq("2.10.6", scalaVersion.value /*, "2.12.2" */) 
 
 scalacOptions ++= Seq("-deprecation", "-feature", "-unchecked")
 
@@ -20,7 +20,7 @@ resolvers += ("releases" at nexusReleases)
 
 resolvers += ("snapshots" at nexusSnapshots)
 
-libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.12.2" % "test"
+libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.13.5" % "test"
 
 publishTo <<= version {
   (v: String) => {
